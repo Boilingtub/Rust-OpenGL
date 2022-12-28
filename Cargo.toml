@@ -7,7 +7,10 @@ edition = "2021"
 
 [dependencies]
 sdl2 = { version = "0.35.2", features = ["bundled", "static-link"] }
-gl = "0.14.0"
+gl = { path = "lib/gl" }
+
+[features]
+gl_devug = ["gl/debug"]
 
 [[bin]]
 name = "rusty-gl"
