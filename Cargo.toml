@@ -2,21 +2,19 @@
 name = "rusty-gl"
 version = "0.1.0"
 edition = "2021"
-
+authors = ["Jan-Hendrik Brink <jhbrink59@gmail.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 sdl2 = { version = "0.35.2", features = ["bundled", "static-link"] }
 gl = { path = "lib/gl" }
-failure = "0.1"
+failure = "0.1.8"
+render_gl_derive = { path = "lib/render_gl_derive" }
+vec-2-10-10-10 = "0.1.2"
+half = "2.2.0"
 
 [build-dependencies]
-walkdir = "2.1"
+walkdir = "2.3.2"
 
 [features]
 gl_devug = ["gl/debug"]
-
-[[bin]]
-name = "rusty-gl"
-test = false
-bench = false
